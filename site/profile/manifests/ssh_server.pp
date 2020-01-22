@@ -3,8 +3,8 @@ class profile::ssh_server {
         ensure => present,
   {
   service {'ssh':
-        ensure => running,
-        unsure => true,
+        ensure => 'running',
+        unsure => 'true',
   }
   ssh_authorized_key {'root@ip-172-31-46-250':
         ensure => present,
